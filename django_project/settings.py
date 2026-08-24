@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Add your local custom apps here
+    "accounts.apps.AccountsConfig",  # Add the accounts app to the installed apps
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "accounts.CustomUser"  # Use the custom user model
