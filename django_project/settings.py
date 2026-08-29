@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Add your local custom apps here
     "accounts.apps.AccountsConfig",  # Add the accounts app to the installed apps
+    "pages.apps.PagesConfig",  # Add the pages app to the installed apps
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = "django_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],  # Add the templates directory
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
